@@ -1,0 +1,42 @@
+<template>
+  <div class="Buttons">
+    <button class="HeaderButton1">IA-ȚI 3 LUNI LA0.00 EUR</button>
+    <button class="HeaderButton2">VEZI ABONAMENTELE</button>
+  </div>
+</template>
+<script>
+export default {
+  name: "TheButtons",
+};
+</script>
+<style>
+.Buttons {
+  padding: 30px 0px;
+}
+
+.HeaderButton1 {
+  background-color: black;
+  text-align: center;
+  color: white;
+  width: 301px;
+  height: 58px;
+  border-radius: 30px;
+  padding: 15px 65px;
+  border: 1px solid black;
+  margin: auto 25px 15px;
+  cursor: pointer;
+}
+
+.HeaderButton2 {
+  background-color: #df0c8b;
+  text-align: center;
+  color: white;
+  width: 301px;
+  height: 58px;
+  border-radius: 30px;
+  padding: 15px 65px;
+  border: 1px solid white;
+  margin: auto 25px 15px;
+  cursor: pointer;
+}
+</style>
