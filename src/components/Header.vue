@@ -1,72 +1,82 @@
 <template>
-  <div class="Navbar">
-    <img class="HeaderLogo" src="../assets/spotify_logo2.jpg" alt="image" />
-    <span class="HamburgerMenu">|||</span>
-    <ul class="NavbarContent">
-      <li>
-        <a href="#">Premium</a>
-      </li>
-      <li>
-        <a href="#">Asistență</a>
-      </li>
-      <li>
-        <a href="#">Descarcă</a>
-      </li>
-      <li>
-        <span id="headerSign">|</span>
-      </li>
-      <li>
-        <a href="#">Înregistrează-te</a>
-      </li>
-      <li>
-        <a href="#">Conectează-te</a>
-      </li>
-    </ul>
+  <div class="main-header">
+    <img class="main-logo" src="../assets/spotify_logo2.jpg" alt="image" />
+    <span class="hamb-menu">|||</span>
+
+    <nav>
+      <a v-for="item in items"
+         :href="item.route">
+        {{ item.name }}
+        <span v-if="item.break">|</span>
+      </a>
+    </nav>
+
   </div>
 </template>
+
 <script>
-export default {
-  name: "TheHeader",
-};
+  export default {
+    name: "TheHeader",
+    data () {
+      return {
+        items: [
+          {
+            name: 'Premium',
+            route: 'premium'
+          },
+          {
+            name: 'Asistență',
+            route: 'asistenta'
+          },
+          {
+            name: 'Descarcă',
+            route: '',
+            break: true
+          },
+          {
+            name: 'Înregistrează-te',
+            route: ''
+          },
+          {
+            name: 'Conectează-te',
+            route: ''
+          },
+        ]
+      }
+    }
+  };
 </script>
-<style scoped>
-.HeaderLogo {
-  height: 45px;
-  width: 125px;
-  margin-top: 5px;
-  margin-left: 15px;
-  cursor: pointer;
-}
 
-.Navbar {
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-}
+<style lang="scss">
+  .main-header {
+    @media only screen and (min-width: 0) {
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      .main-logo {
+        height: 45px;
+        width: 125px;
+        margin-top: 5px;
+        margin-left: 15px;
+        cursor: pointer;
+      }
+      .hamb-menu {
+        color: white;
+        transform: rotate(90deg);
+      }
+      nav {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        color: white;
+      }
+    }
 
-.HamburgerMenu {
-  color: white;
-  transform: rotate(90deg);
-}
-
-.NavbarContent {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  color: white;
-}
-
-.NavbarContent li a {
-  color: white;
-  text-decoration: none;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-@media (min-width: 992px) {
-  .Navbar .HamburgerMenu {
-    display: none;
+    @media only screen and (min-width: 992px) {
+      .hamb-menu {
+        display: none;
+      }
+    }
   }
-}
 </style>

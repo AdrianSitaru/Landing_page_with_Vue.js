@@ -3,27 +3,38 @@
     <h2>Alege-ți abonamentul Premium</h2>
     <h3>Asculți nelimitat pe telefon, în boxe și pe alte dispozitive.</h3>
     <div class="Cards__Container">
-      <FirstCard />
-      <SecondCard />
-      <ThridCard />
-      <CardFour />
+      <PremiumCard v-for="(item, index) in cards"
+                   :data="item"
+                   :key="index" />
     </div>
   </div>
 </template>
 <script>
-import CardFour from "./CardFour.vue";
-import FirstCard from "./FirstCard.vue";
-import SecondCard from "./SecondCard.vue";
-import ThridCard from "./ThridCard.vue";
-export default {
-  name: "PremiumSection",
-  components: {
-    FirstCard,
-    SecondCard,
-    ThridCard,
-    CardFour,
-  },
-};
+  import PremiumCard from "./PremiumCard.vue";
+  export default {
+    name: "PremiumSection",
+    data () {
+      return {
+        cards: [
+          {
+            title: '',
+            price: '',
+            options: [''],
+            description: ``
+          },
+          {–
+            title: '',
+            price: '',
+            options: [''],
+            description: ``
+          },
+        ]
+      }
+    },
+    components: {
+      PremiumCard
+    },
+  };
 </script>
 <style>
 .Premium__section {
