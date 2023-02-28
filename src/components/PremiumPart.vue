@@ -107,6 +107,7 @@ export default {
 
 .cards {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .premium-section {

@@ -9,8 +9,8 @@
         <div class="image-holder">
           <img v-bind:key="images.id" v-for="images in cardData.images" :src="images" alt="image">
         </div>
-        <div v-bind:key="description.id" v-for="description in cardData.description" class="description-holder">
-          <p>{{ description }}</p>
+        <div >
+          <p v-bind:key="description.id" v-for="description in cardData.description" class="description-holder">{{ description }}</p>
         </div>
       </div>
       <button class="card-button">{{ cardData.button }}</button>
@@ -32,32 +32,34 @@ export default {
 </script>
 
 <style>
-.image-holder {
+span {
+  font-size: 15px;
+}
+img {
+  margin: 10px;
   display: block;
 }
-.content-holder {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 
 .card-holder h4 {
-  font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 0px;
+
 }
 
+.content-holder{
+  display: flex;
+  height: 230px;
+}
 .price {
-  font-size: 18px;
+  font-size: 17px;
+  margin-top: 5px;
 }
 
 .description-holder {
   font-size: 15px;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  padding-top: 10px;
+
 }
 .card-holder {
   box-shadow: 1px 1px 4px 1px rgb(143 141 141);
@@ -85,8 +87,12 @@ export default {
 .image-holder img {
   height: 19px;
   width: 17px;
-  display: flex;
   padding: 5px;
+
+}
+
+.card-terms {
+  font-size: 12px;
 }
 
 .card-button {
