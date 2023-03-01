@@ -118,22 +118,26 @@ export default {
 }
 </script>
 
-<style>
-
-.cards {
-  display: flex;
-  justify-content: space-evenly;
-}
+<style lang="scss">
 
 .premium-section {
   background-color: #d9d9d9;
   font-size: 20px;
   text-align: center;
+
+  .cards {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+h2 {
+    padding: 15px;
+    font-size: 40px;
+  }
+  p {
+    padding-bottom: 15px;
+  }
 }
 
-.premium-section h2 {
-  padding: 15px;
-  font-size: 40px;
-}
 
 </style>

@@ -2,19 +2,19 @@
   <div id="app">
     <Header/>
     <Herro/>
-    <FeatureComponent :data="item" v-for="(item, index) in items" :key="index" />
+    <div class="features-list">
+      <FeatureComponent :data="item" v-for="(item, index) in items" :key="index" />
+    </div>
     <PremiumPart />
+    <FooterPart />
   </div>
 </template>
-
 <script>
-
 import PremiumPart from "@/components/PremiumPart.vue";
 import Header from "./components/Header.vue"
 import Herro from "./components/Herro.vue"
 import FeatureComponent from "@/components/FeatureComponent.vue";
-
-
+import FooterPart from "@/components/Footer.vue";
 export default {
   name: 'App',
   data() {
@@ -44,6 +44,7 @@ export default {
     }
   },
   components: {
+    FooterPart,
     Herro,
     Header,
     FeatureComponent,
@@ -52,8 +53,14 @@ export default {
 }
 </script>
 <style lang="scss">
-*, app {
+*, #app {
   margin: 0;
   padding: 0;
 }
+
+.features-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 </style>

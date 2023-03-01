@@ -55,6 +55,9 @@ export default {
     font-size: 38px;
   }
 
+  p {
+    font-size: 12px;
+  }
   .hero-banner p {
     font-size: 12px;
     margin-bottom: 15px;

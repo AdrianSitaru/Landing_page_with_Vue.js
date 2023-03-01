@@ -1,9 +1,11 @@
 <template>
-  <div class="presentation-container">
+  <div class="feature-component">
+    <div>
       <img :src="data.image"/>
       <h3>{{ data.description1 }}</h3>
       <p>{{ data.description2 }}</p>
     </div>
+  </div>
 </template>
 <script>
 export default ({
@@ -12,12 +14,13 @@ export default ({
 })
 </script>
 <style lang="scss">
-.presentation-container {
-  padding: 20px;
+.feature-component {
+  padding: 10px;
+
   img {
-    margin-left: 20px;
-    height: 120px;
+    padding: 10px;
+    margin-left: 10px;
+    height: 100px;
   }
 }
-
 </style>
