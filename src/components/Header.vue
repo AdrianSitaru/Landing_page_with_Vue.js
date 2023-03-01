@@ -1,14 +1,12 @@
 <template>
-  <div class="main-header">
-    <img src="../assets/spotify_logo2.jpg">
-
+  <header class="main-header">
+    <img src="../assets/spotify_logo2.jpg"/>
     <nav>
-      <a v-for="item in items" :key="item.id">{{ item.name }} <span v-if="item.break">|</span>
+      <a v-for="item in items" :key="item.id">
+        {{ item.name }}<span v-if="item.break">|</span>
       </a>
-
-
     </nav>
-  </div>
+  </header>
 
 </template>
 
@@ -77,6 +75,7 @@ nav {
   margin: 10px;
   width: 500px;
 }
+
 nav span {
   margin-left: 10px;
 }

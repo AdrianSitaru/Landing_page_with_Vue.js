@@ -15,14 +15,12 @@
       </p>
     </div>
     <div class="image">
-      <img src="https://i.scdn.co/image/ab678e040000ed3a34d5c94b798ed61637264101">
+      <img src="https://i.scdn.co/image/ab678e040000ed3a34d5c94b798ed61637264101"/>
     </div>
   </div>
 </template>
-
 <script>
 import Buttons from "@/components/Buttons.vue";
-
 export default {
   name: "HerroPart.vue",
   components: {
@@ -30,45 +28,42 @@ export default {
   }
 }
 </script>
-
-<style>
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
+<style lang="scss">
 .hero-banner {
   background-color: #df0c8b;
   color: white;
   padding-left: 40px;
   display: flex;
   justify-content: space-between;
-}
 
-.hero-banner-container {
-  max-width: 800px;
-  margin-top: 50px;
-}
+  .hero-banner-container {
+    max-width: 800px;
+    margin-top: 50px;
+  }
 
-.hero-banner-container h2 {
-  padding: 15px 0px;
-}
+  .hero-banner-container h2 {
+    padding: 15px 0px;
+  }
 
-.hero-banner h1 {
-  padding-top: 50px;
-  margin-top: 0px;
-  font-size: 38px;
+  a {
+    text-decoration: none;
+    color: white;
 }
+  .hero-banner h1 {
+    padding-top: 50px;
+    margin-top: 0px;
+    font-size: 38px;
+  }
 
-.hero-banner p {
-  font-size: 12px;
-  margin-bottom: 15px;
-}
+  .hero-banner p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
 
-.image img {
-  height: 350px;
-  width: 350px;
-  padding-right: 30px;
+  .image img {
+    height: 350px;
+    width: 350px;
+    padding-right: 30px;
+  }
 }
 </style>
