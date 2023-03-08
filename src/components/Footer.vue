@@ -1,6 +1,6 @@
 <template>
   <div class="footer-part">
-    <img src="../assets/spotify_logo2.jpg">
+    <img src="../assets/spotify_logo2.jpg"/>
     <nav>
       <a href='item.url' v-for="(item, index) in items1" :key="index">
         {{ item.text }}
@@ -16,11 +16,11 @@
         {{ item.text }}
       </a>
     </nav>
-    <div class="social-media">
+    <figure class="social-media">
       <img src="../assets/instagram.png"/>
       <img src="../assets/twitter.png"/>
       <img src="../assets/facebook.png"/>
-    </div>
+    </figure>
   </div>
 </template>
 <script>
@@ -55,6 +55,34 @@ export default {
 
 <style lang="scss">
 .footer-part {
+  @media only screen and (min-width: 0) {
+
+    background-color: black;
+    a {
+      color: white;
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: none;
+      display: block;
+      padding: 15px;
+    }
+    img {
+      padding: 40px 15px;
+      height: 38px;
+      width: 110px;
+      margin-left: 25px;
+    }
+
+    @media only screen and (min-width: 768px) {
+    .social-media img {
+        height: 38px;
+        width: 38px;
+      }
+    }
+  }
+}
+
+footer-part {
   background-color: black;
   color: white;
   height: 500px;
@@ -62,20 +90,6 @@ export default {
   flex-wrap: nowrap;
   justify-content: space-evenly;
 
-  img {
-    padding: 40px 15px;
-    height: 38px;
-    width: 110px;
-    margin-left: 25px;
-  }
-
-  a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    display: block;
-    padding: 15px;
-  }
 
   nav {
     display: block;
@@ -86,10 +100,7 @@ export default {
     display: flex;
   }
 
-  .social-media img {
-    height: 40px;
-    width: 40px;
-  }
+
 }
 
 </style>

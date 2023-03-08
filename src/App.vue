@@ -3,10 +3,10 @@
     <Header/>
     <Herro/>
     <div class="features-list">
-      <FeatureComponent :data="item" v-for="(item, index) in items" :key="index" />
+      <FeatureComponent :data="item" v-for="(item, index) in items" :key="index"/>
     </div>
-    <PremiumPart />
-    <FooterPart />
+    <PremiumPart/>
+    <FooterPart/>
   </div>
 </template>
 <script>
@@ -15,6 +15,7 @@ import Header from "./components/Header.vue"
 import Herro from "./components/Herro.vue"
 import FeatureComponent from "@/components/FeatureComponent.vue";
 import FooterPart from "@/components/Footer.vue";
+
 export default {
   name: 'App',
   data() {
@@ -53,14 +54,21 @@ export default {
 }
 </script>
 <style lang="scss">
+@media only screen and (min-width: 0) {
+ .main-header {
+   width: 100%;
+ }
+}
+
 *, #app {
   margin: 0;
   padding: 0;
 }
 
-.features-list {
-  display: flex;
-  justify-content: space-evenly;
+@media only screen and (min-width: 768px) {
+  .features-list {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
-
 </style>

@@ -1,6 +1,7 @@
 <template>
+
   <div class="feature-component">
-    <div>
+    <div class="feature-content">
       <img :src="data.image"/>
       <h3>{{ data.description1 }}</h3>
       <p>{{ data.description2 }}</p>
@@ -10,17 +11,22 @@
 <script>
 export default ({
   name: 'FeatureComponent',
-  props: ['data']
+  props: ['data'],
 })
 </script>
 <style lang="scss">
 .feature-component {
-  padding: 10px;
+  height: 300px;
+  align-items: center;
+  display: flex;
 
-  img {
+  @media (min-width: 0) {
     padding: 10px;
-    margin-left: 10px;
-    height: 100px;
+    img {
+      padding: 10px;
+      margin-left: 10px;
+      height: 120px;
+    }
   }
 }
 </style>

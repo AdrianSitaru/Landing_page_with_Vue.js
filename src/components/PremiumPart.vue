@@ -1,7 +1,7 @@
 <template>
   <div class="premium-section">
     <h2>{{ title }}</h2>
-    <p>{{ paragraph }}</p>
+    <h5>{{ paragraph }}</h5>
     <div class="cards">
       <PremiumCard v-for="card in cards " :key="card.id" :card-data="card"
       />
@@ -120,22 +120,59 @@ export default {
 
 <style lang="scss">
 
-.premium-section {
-  background-color: #d9d9d9;
-  font-size: 20px;
-  text-align: center;
 
+@media (min-width: 0) {
+  .premium-section {
+    background-color: #d9d9d9;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+  }
+
+  .content-holder {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-left: 80px;
+  }
+
+  h2 {
+    padding-top: 25px;
+    font-size: 40px;
+  }
+
+  p {
+    padding-bottom: 15px;
+  }
+
+  h5 {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-holder {
+    margin-left: 30px;
+    margin: 10px;
+  }
+  .content-holder {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
   .cards {
     display: flex;
     justify-content: space-evenly;
   }
 
-h2 {
-    padding: 15px;
-    font-size: 40px;
-  }
-  p {
-    padding-bottom: 15px;
+  .content-holder {
+    width: 200px;
+    margin: 50px 0px;
   }
 }
 

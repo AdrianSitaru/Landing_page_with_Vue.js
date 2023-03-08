@@ -20,8 +20,37 @@ export default {
 </script>
 
 <style lang="scss">
-.buttons {
-  padding: 30px 0px;
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+
+  .header-button1 {
+    width: 90%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 58px;
+    border-radius: 30px;
+    padding: 15px 65px;
+    border: 1px solid black;
+    margin: auto 25px 15px;
+    cursor: pointer;
+  }
+
+  .header-button2 {
+    width: 90%;
+    background-color: rgb(29, 117, 222);
+    text-align: center;
+    color: white;
+    height: 58px;
+    border-radius: 30px;
+    padding: 15px 65px;
+    border: 1px solid white;
+    margin: auto 25px 15px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .header-button1 {
     background-color: black;
     text-align: center;
@@ -34,8 +63,9 @@ export default {
     margin: auto 25px 15px;
     cursor: pointer;
   }
+
   .header-button2 {
-    background-color: #df0c8b;
+    background-color: rgb(29, 117, 222);
     text-align: center;
     color: white;
     width: 301px;
@@ -46,6 +76,11 @@ export default {
     margin: auto 25px 15px;
     cursor: pointer;
   }
+}
+.buttons {
+  padding: 30px 0px;
+
+
 }
 
 </style>

@@ -7,9 +7,7 @@
       </a>
     </nav>
   </header>
-
 </template>
-
 <script>
 export default {
   data() {
@@ -43,41 +41,64 @@ export default {
         }]
     }
   },
-
   name: "HeaderWeb.vue"
-
 }
 </script>
 
-<style>
+<style lang="scss">
+@media only screen and (min-width: 0) {
 
-.main-header {
-  background-color: black;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
+  .main-header {
+    background-color: black;
+    width: 100%;
+    padding: 10px;
+  }
 
+  .main-header img {
+    height: 45px;
+    width: 125px;
+    margin-top: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
 }
 
-.main-header img {
-  height: 45px;
-  width: 125px;
-  margin-top: 5px;
-  margin-left: 15px;
-  cursor: pointer;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-header nav {
+    display: none;
+  }
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  padding: 10px;
-  margin: 10px;
-  width: 500px;
-}
+@media only screen and (min-width: 992px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 5px 20px;
+  }
 
-nav span {
-  margin-left: 10px;
-}
+  .main-header {
+    background-color: black;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .main-header img {
+    height: 45px;
+    width: 125px;
+    margin-top: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  nav span {
+    margin-left: 10px;
+  }
+
+  nav a {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+}
 </style>
